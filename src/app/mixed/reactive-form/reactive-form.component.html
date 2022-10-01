@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form [formGroup]="myReactiveForm">
+                <div formGroupName="userDetails">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Enter name" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        <small class="text-danger"
+                            *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">
+                            Please enter valid email </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="form-group" formArrayName="skills">
+                    <label>Skills</label>
+                    <ng-container *ngFor="let skill of myReactiveForm.get('skills').controls; index as i">
+                        <input type="text" class="form-control mt-2" placeholder="Add skills" formControlName="{{i}}">
+                    </ng-container>
+                    <button class="btn btn-primary btn-sm mt-2" (click)="onAddSkills()">Add Skills</button>
+                </div>
+                <button class="btn btn-success mt-2" (click)="onSubmit()">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

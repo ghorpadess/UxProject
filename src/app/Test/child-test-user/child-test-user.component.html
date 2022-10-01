@@ -1,0 +1,38 @@
+<!-- <div class="container">
+    <div class="row main">
+        <div class="col-6 child-user py-5">
+            <div class="input-field text-center">
+                <input type="text" name="asa" placeholder="Create User" clear #user>
+            </div>
+            <div class="button text-center">
+                <button class="btn btn-success user-button" (click)="createUser(user)">Create User</button>
+            </div>
+
+        </div>
+    </div>
+</div> -->
+
+<div class="container admin">
+    <div class="row">
+        <div class="col-12 text-center py-2">
+            <h3>Create User</h3>
+        </div>
+    </div>
+    <div class="row Admin-main-container">
+        <div class="col-12">
+            <div class="input text-center py-2">
+                <input type="text" name="asa" placeholder="Create User" clear #user>
+            </div>
+            <div class="button text-center">
+                <button class="btn btn-success" (click)="createUser(user)">Create User</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="counter py-5" *ngIf="createdUser.length">
+                    <h4 class="count text-success">Total User:{{createdUser.length}} </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

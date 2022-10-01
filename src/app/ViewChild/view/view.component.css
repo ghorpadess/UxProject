@@ -1,0 +1,7 @@
+.our{
+    display: flex;
+    justify-content: end;
+}
+.view-parent{
+    border: 1px solid orange;
+}

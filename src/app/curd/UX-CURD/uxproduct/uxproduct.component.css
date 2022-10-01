@@ -1,0 +1,19 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    border: 1px solid violet;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.label {
+    margin-left: 30px;
+    color: rgba(14, 21, 213, 0.874);
+}
+
+table,th,td {
+    border: 1px solid green;
+}

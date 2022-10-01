@@ -1,0 +1,24 @@
+<div class="container admin">
+    <div class="row">
+        <div class="col-12 text-center py-2">
+            <h3>Create Admin</h3>
+        </div>
+    </div>
+    <div class="row Admin-main-container">
+        <div class="col-12">
+            <div class="input text-center py-2">
+                <input type="text" name="admin" value="" placeholder="Create Admin" clear="value" #admin>
+            </div>
+            <div class="button text-center">
+                <button class="btn btn-success" (click)="onCreateAdmin(admin)">Create Admin</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="counter py-5" *ngIf="createdAdmin.length">
+                    <h4 class="count text-success">Total Admin: {{createdAdmin.length}} </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

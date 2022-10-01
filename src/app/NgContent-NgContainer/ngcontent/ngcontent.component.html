@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 w-100 bg-primary d-flex text-light asa">
+            User of Ne-Content
+        </div>
+    </div>
+    <div class="row d-flex">
+        <div class="col-6">
+            <app-cards>
+                <h5 class="card-title">Laptop</h5>
+                <button class="btn btn-primary">Laptop add to Cart</button>
+            </app-cards>
+        </div>
+        <div class="col-6">
+            <app-cards>
+                <h5 class="card-title">Mobile</h5>
+                <button class="btn btn-success">Mobile add to cart</button>
+            </app-cards>
+        </div>
+        <div class="col-6">
+            <app-cards>
+                <h5 class="card-title">TV</h5>
+                <button class="btn btn-danger">Tv add to Cart</button>
+            </app-cards>
+        </div>
+        <div class="col-6">
+            <app-cards>
+                <h5 class="card-title">Washing Machine</h5>
+                <button class="btn-btn-secondary">Machine add to Cart</button>
+            </app-cards>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------******************************---------------------------------------------- -->
+
+    <div class="row mt-3">
+        <div class="col-6" *ngFor="let student of students">
+            <div class="card mt-4 card-outer">
+                <h5 class="card-header text-primary">{{student.name}} {{student.lname}} </h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            Age: <span class="text-primary">{{student.age}}</span>
+                        </div>
+                        <div class="col-6">
+                            Education: <span class="text-primary">{{student.education}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            Email: <span class="text-primary">{{student.email}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 view-form">
+                        <button class="btn btn-primary" (click)="onViewForm(student)">View Form</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

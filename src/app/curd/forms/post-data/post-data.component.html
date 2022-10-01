@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form [formGroup]="formPostData">
+                <!-- <div class="form-control">
+                    <label>ID</label>
+                    <input type="number" formControlName="id">
+                </div> -->
+                <div class="form-control">
+                    <label>First Name</label>
+                    <input type="text" formControlName="name">
+                </div>
+                <div class="form-control">
+                    <label>Age</label>
+                    <input type="number" formControlName="age">
+                </div>
+                <div class="form-control">
+                    <label>EMP Id</label>
+                    <input type="number" formControlName="empId">
+                </div>
+                <div class="form-control">
+                    <label>branch</label>
+                    <input type="text" formControlName="branch">
+                </div>
+                <div class="form-control">
+                    <label>Role</label>
+                    <input type="text" formControlName="role">
+                </div>
+
+                <button type="button" class="btn btn-primary" (click)="onClick()">Post data</button>
+            </form>
+        </div>
+    </div>
+</div>

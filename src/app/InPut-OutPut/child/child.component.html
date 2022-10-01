@@ -1,0 +1,11 @@
+<div class="row Child">
+    <div class="col-12 py- d-flex bg-primary text-white head">
+        <div> Child Component</div>
+    </div>
+    <div class="text py-4 d-flex bg-primary text-white head">
+        <p *ngIf="!isSelected">Please Select Products</p>
+        <p *ngIf="isSelected"> <strong class="text-danger">{{selected}}</strong> Is Selected</p>
+    </div>
+    <div class="col-12 bg-primary text-center"><button class="btn btn-success" (click)="onAddToCart()">Add To
+            Cart</button></div>
+</div>

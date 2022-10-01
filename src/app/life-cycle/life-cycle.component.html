@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="cil-12">
+            <h3 class="text-primary"> Angular Life-Cycle Hooks</h3>
+        </div>
+        <div class="row field-container">
+            <div class="col-12 py-3 text-center">
+                <div class="input-field">
+                    <input type="text" name="swapnil" placeholder="Type..." #uName>
+                </div>
+                <div class="send-button py-2">
+                    <button class="btn btn-success" (click)="onSendData(uName)">Send Data</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <app-child [userData]="dataFromParent"></app-child>
+            </div>
+        </div>
+    </div>
+</div>

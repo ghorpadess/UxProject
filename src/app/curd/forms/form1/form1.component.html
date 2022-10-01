@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" class="general">
+            General Information Form
+        </div>
+    </div>
+    <form [formGroup]="genralInfoForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="label">Name</label>
+                    <input type="text" placeholder="Enter your name" class="form-control" formControlName="name"
+                        ngDodal="name">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="label">Surname</label>
+                    <input type="text" placeholder="Enter last name" class="form-control" formControlName="lname">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="label">Age</label>
+                    <input type="number" placeholder="Enter your age" class="form-control" formControlName="age">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="label">Education</label>
+                    <!-- <input type="text" placeholder="select your education" class="form-control"
+                        formControlName="education"> -->
+                    <select class="form-control" formControlName="education">
+                        <option *ngFor="let education of educations">{{education}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group">
+                    <label class="label">Select University</label>
+                    <select class="form-control" formControlName="university">
+                        <option *ngFor="let university of universitys">{{university}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="label">Email</label>
+                    <input type="email" placeholder="Enter Email ID" class="form-control" formControlName="email">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group" *ngIf="!studentForm">
+                    <label class="label">Password</label>
+                    <input type="text" placeholder="Write Password" class="form-control" formControlName="password">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group" *ngIf="!studentForm">
+                    <label class="label">About Educational Background</label>
+                    <textarea type="text" placeholder="Char limit max 1000 Char" class="form-control"
+                        formControlName="info"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-6 reset">
+            <button class="btn btn-primary button" (click)="onReset()">Reset Form</button>
+        </div>
+        <div class="col-6 reset">
+            <button class="btn btn-primary button-sub" (click)="onSubmit()">Submit Form</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Education</th>
+                        <th>age</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let value of formValues">
+                        <td>{{value.name}} </td>
+                        <td>{{value.lname}} </td>
+                        <td>{{value.education}} </td>
+                        <td>{{value.age}} </td>
+                        <td>{{value.email}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

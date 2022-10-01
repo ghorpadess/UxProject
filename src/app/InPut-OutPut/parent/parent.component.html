@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row head">
+        <div class="col12 by bg-primary text-white">
+            Buy Product
+        </div>
+    </div>
+    <div class="row head">
+        <div *ngIf="isProductSelect" class="col12 by bg-success text-white">
+            <strong class="text-danger">{{isProductSelect}} </strong>&nbsp; Is added in cart
+        </div>
+    </div>
+    <div class="row py-4 prods">
+        <div class="col-4">
+            <div class="card" style="width: 20rem;">
+                <img src="../../assets/lapi.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Laptop</h3>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary" (click)="onClick('Laptop')">Select This Product
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 20rem;">
+                <img src="../../assets/mob.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Mobile</h3>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary" (click)="onClick('Mobile')">Select This Product
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 20rem;">
+                <img src="../../assets/mach.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Washing Machine</h3>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary" (click)="onClick('Washing-Machine')">Select This Product
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-child-comp [isSelected]="productSelected" [selected]="selectedProduct"
+        (isProductSelect)="productAddToCart($event)"></app-child-comp>
+</div>

@@ -1,0 +1,15 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.user-main-div{
+    border: 1px solid green;
+
+}
+.admin-main-div{
+    border: 1px solid green;
+}
+.main-cont{
+    height: 100%;
+}

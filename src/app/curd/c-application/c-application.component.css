@@ -1,0 +1,9 @@
+.cvc{
+    border: 2px solid white;
+    border-radius: 50px;
+    /* box-shadow: violet; */
+    font-weight: 500;
+}
+.edit{
+    border-radius: 20px;
+}

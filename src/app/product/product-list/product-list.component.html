@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <input type="name" placeholder="Search product" [(ngModel)]="searchPro">
+            <i (click)="clearSearch()" class="close" *ngIf="searchPro">X</i>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class='table'>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <!-- <th>Email</th>
+                        <th>City</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of productList | filter:searchPro'>
+                        <td>{{product.sr}}</td>
+                        <td> {{product.name}} </td>
+                        <td>{{product.price}}</td>
+                        <!-- <td>{{product.email}}</td>
+                        <td>{{product.address.city}}</td> -->
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</div>

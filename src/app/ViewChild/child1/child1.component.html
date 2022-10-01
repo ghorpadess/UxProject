@@ -1,0 +1,20 @@
+<div class="container py-3 main-container" #asd appTest>
+    <div class="row">
+        <div class="col-12">
+            <p class="title-text">Our product is <strong class="text-success">{{product}}</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="input-field text-center py-4">
+                <input type="text" name="product" placeholder="Enter product" value="{{product}}">
+            </div>
+            <div class="button-update text-center">
+                <button class="btn btn-success" (click)="onClick()">Update Product</button>
+            </div>
+            <ng-content></ng-content>
+            <button class="btn btn-success" (click)="changeColor('green')">Green</button> &nbsp;
+            <button class="btn btn-danger" (click)="changeColor('Red')">Red</button>
+        </div>
+    </div>
+</div>

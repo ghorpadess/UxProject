@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-success" (click)="onAddMember()">Add Member</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Age</th>
+                        <th>EMP Id </th>
+                        <th>branch</th>
+                        <th>Role</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let dt of tableData">
+                        <td>{{dt.id}}</td>
+                        <td>{{dt.name}}</td>
+                        <td>{{dt.age}}</td>
+                        <td>{{dt.empId}}</td>
+                        <td>{{dt.branch}}</td>
+                        <td>{{dt.role}}</td>
+                        <td><button class="btn btn-primary" (click)="onEdit(dt.id, dt)">Edit</button></td>
+                        <td><button class="btn btn-danger" (click)="onDelete(dt)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

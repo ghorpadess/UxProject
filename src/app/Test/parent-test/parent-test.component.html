@@ -1,0 +1,73 @@
+<div class="container main-cont">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-danger text-center py-4"> Parent Component</h3>
+        </div>
+    </div>
+    <div class="row main-container">
+        <div class="col-6 user-main-div">
+            <h4 class="text-success">User</h4>
+
+            <div class="user-counter py-4">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="px-4">Remove-User</th>
+                            <th>User Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let users of createdUser index as i">
+                            <td><button class="btn btn-danger" (click)="onClickRemove(i)">Remove User</button></td>
+                            <td>{{users.name}} </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ng-container>
+
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-6 admin-main-div">
+            <div class="admin-text">
+                <h4 class="text-success text-center">Admin</h4>
+            </div>
+            <div class="all-admin-remove text-end" *ngIf="allAdminList &&  allAdminList.length > 3">
+                <button class="btn btn-danger" (click)="removeAllAdmins()">Remove All</button>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table>
+                        <thead>
+                            <tr class="admin-table-heading">
+                                <th class="px-2">Admin-Name</th>
+                                <th class="px-2">Remove-Admin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let admin of allAdminList index as i">
+                                <td>{{admin.name}} </td>
+                                <td><button class="btn btn-danger" (click)="onRemoveAdmin(i)">Remove-admin</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-danger text-center py-4"> Child Component</h3>
+        </div>
+    </div>
+
+    <div class="row main">
+        <div class="col-6">
+            <app-child-test-user (newUserCreated)="usersFormChild($event)"></app-child-test-user>
+        </div>
+        <div class="col-6">
+            <app-child-test-admin (allAdmins)="adminsFromChild($event)"></app-child-test-admin>
+        </div>
+    </div>
+</div>

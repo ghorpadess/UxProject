@@ -1,0 +1,42 @@
+<div class="container py-3 main-container">
+    <div class="row">
+        <div class="col-12">
+            <p class="title-text">Our product is <strong class="text-success">{{updatedProduct}}</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="input-field text-center py-4">
+                <input type="text" name="product" placeholder="Enter product" #pro>
+            </div>
+            <div class="button-update text-center">
+                <button class="btn btn-success" (click)="onUpdateProduct(pro)">Update Product</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Behavior Subject -->
+<div class="row py-5">
+    <div class="col-12 text-end">
+        <h3 class="text-primary">Angular Behavior</h3>
+    </div>
+</div>
+<div class="main-div">
+    <div class="py-3 main-container ">
+        <div class="row">
+            <div class="col-12">
+                <p class="title-text px-4">Our user is <strong class="text-success">{{userName}}</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="input-field text-center py-4">
+                    <input type="text" name="product" placeholder="Enter product" #uname>
+                </div>
+                <div class="button-update text-center">
+                    <button class="btn btn-success" (click)="onUpdateUser(uname)">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

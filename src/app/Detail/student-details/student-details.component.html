@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+            <div class="card" style="width: 35rem;">
+                <ul *ngFor="let student of selected" class="list-group list-group-flush">
+                    <li class="list-group-item">Id:<strong class="text-success">{{student.id}}</strong> </li>
+                    <li class="list-group-item">Name: <strong class="text-success">{{student.name}}</strong> </li>
+                    <li class="list-group-item">Education: <strong class="text-success">{{student.department}}</strong>
+                    </li>
+                    <li class="list-group-item">Age: <strong class="text-success">{{student.age}}</strong> </li>
+                    <li class="list-group-item">Department:<strong class="text-success">{{student.salary}}</strong>
+                    </li>
+                    <li class="list-group-item">Salary: <strong class="text-success">{{student.address}}</strong> </li>
+                </ul>
+                <div>
+                    <button class="btn btn-warning" (click)="onStudentList()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</div>

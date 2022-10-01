@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="label">ID</label>
+                            <input type="text" placeholder="Enter your name" class="form-control" #pId>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="label">Product Name</label>
+                            <input type="text" placeholder="Enter Product Name" class="form-control" #pName>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="label">Price</label>
+                            <input type="number" placeholder="Enter product Price" class="form-control" #pPrice>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-4 reset">
+                    <button class="btn btn-primary button" (click)="onAddProduct(pId, pName, pPrice)">{{isEdit ? 'Update
+                        Product' : 'Add Product'}}</button>
+                </div>
+                <div class="col-4 reset">
+                    <button class="btn btn-primary button-sub" (click)="onSaveProduct()">Save Product</button>
+                </div>
+                <div class="col-4 reset">
+                    <button class="btn btn-primary button-sub" (click)="onGetProduct()">Get Product</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+        <div class="col-5">
+            <table>
+                <thead>
+                    <tr>
+                        <th>sr</th>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Edit Product</th>
+                        <th>Delete Product</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products; index as i">
+                        <td>{{i + 1}} </td>
+                        <td>{{product.id}} </td>
+                        <td>{{product.name}} </td>
+                        <td>{{product.price}} </td>
+                        <td><button class="btn btn-success" (click)="editProduct(i)">Edit </button> </td>
+                        <td><button class="btn btn-danger" (click)="deleteProduct(i)">Delete </button> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
