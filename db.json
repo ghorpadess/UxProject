@@ -1,0 +1,85 @@
+{
+  "posts": [
+    [
+      {
+        "id": 9,
+        "firstName": "Swapnil",
+        "lastName": "Ghorpade",
+        "email": "swapnilghorpade5567@gmail.com",
+        "mobile": 7757827782,
+        "Salary": 65000
+      },
+      {
+        "id": 10,
+        "firstName": "Pravin",
+        "lastName": "Ghogare",
+        "email": "praving@gmal.com",
+        "mobile": 7745623454,
+        "Salary": 50000
+      },
+      {
+        "id": 11,
+        "firstName": "Vikas",
+        "lastName": "Khandekar",
+        "email": "165",
+        "mobile": 7896541232,
+        "Salary": 78587
+      },
+      {
+        "id": 12,
+        "firstName": "Eknath",
+        "lastName": "Raut",
+        "email": "eknath12@gmail.com",
+        "mobile": 775824589,
+        "Salary": 50000
+      }
+    ],
+    [
+      {
+        "id": 9,
+        "firstName": "Swapnil",
+        "lastName": "Ghorpade",
+        "email": "swapnilghorpade5567@gmail.com",
+        "mobile": 7757827782,
+        "Salary": 65000
+      },
+      {
+        "id": 10,
+        "firstName": "Pravin",
+        "lastName": "Ghogare",
+        "email": "praving@gmal.com",
+        "mobile": 7745623454,
+        "Salary": 50000
+      },
+      {
+        "id": 11,
+        "firstName": "Vikas",
+        "lastName": "Khandekar",
+        "email": "165",
+        "mobile": 7896541232,
+        "Salary": 78587
+      },
+      {
+        "id": 12,
+        "firstName": "Eknath",
+        "lastName": "Raut",
+        "email": "eknath12@gmail.com",
+        "mobile": 775824589,
+        "Salary": 50000
+      }
+    ],
+    [
+      {
+        "firstName": "Sanket",
+        "lastName": "J",
+        "email": "sanket12@gmail.com",
+        "mobile": 8796352154,
+        "Salary": 25000
+      }
+    ]
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
